@@ -1,0 +1,1 @@
+Supervisor review added explicit original GPU index/UUID, torch/transformers versions and Qwen modeling source hash assertions to the separate resume controller before launch. No frozen original source or generated rows were modified. Original controller backup is ignored in runs/bfcl-preparation/resume-before-runtime-review.py. CPU dry-run must pass before GPU lease.

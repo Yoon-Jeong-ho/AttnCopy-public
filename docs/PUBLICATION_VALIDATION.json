@@ -1,0 +1,87 @@
+{
+  "revision": "public-redaction-r1",
+  "scope": "two existing AttnCopy commits and portable operational configuration",
+  "private_original_git_backup_restore_verified": true,
+  "original_reachable_object_count": 84,
+  "cpu_checks": [
+    {
+      "check": "portable-runtime-cpu",
+      "passed": true,
+      "tests": 23,
+      "cuda_visible_devices": ""
+    },
+    {
+      "check": "official-integration-cpu",
+      "passed": true,
+      "tests": 4,
+      "cuda_visible_devices": ""
+    },
+    {
+      "check": "strict-scoring-cpu",
+      "passed": true,
+      "tests": 3,
+      "cuda_visible_devices": ""
+    },
+    {
+      "check": "original-recovery-hash-gate",
+      "passed": true,
+      "tests": 1,
+      "cuda_visible_devices": ""
+    }
+  ],
+  "initial_unsplit_test_attempt": {
+    "passed": false,
+    "tests": 31,
+    "errors": 5,
+    "failures": 1,
+    "reason": "official dependencies belong to the isolated CPU environment; original recovery test intentionally rejects changed original code hashes",
+    "resolution": "split environment checks and run original hash-bound recovery integration against the unchanged original checkout; no integrity guard removed"
+  },
+  "scientific_preservation": {
+    "files": 70,
+    "bytes": 1189530,
+    "blocked_patterns": 15,
+    "unchanged_scientific_sections": [
+      "results/BFCL_VALIDATION.json:tables",
+      "results/BFCL_VALIDATION.json:all_case_ids",
+      "results/BFCL_VALIDATION.json:checks",
+      "results/bfcl-658.json:tables",
+      "results/bfcl-658.json:subgroups",
+      "results/bfcl-658.json:native_safety",
+      "results/bfcl-658.json:limits",
+      "results/pilot-20261001.json:tables",
+      "results/pilot-20261001.json:selection",
+      "results/pilot-20261001.json:recovery",
+      "results/pilot-20261001.json:attention_overhead",
+      "results/pilot-20261001.json:limits",
+      "results/pilot-20261001.json:argument_assignment",
+      "results/pilot-20261001.json:schema_audit",
+      "configs/bfcl-658.json:selection",
+      "configs/pilot.json:selection"
+    ],
+    "historical_sha256_values_preserved": true,
+    "all_nonpath_config_values_preserved": true,
+    "raw_and_scored_prediction_hashes_preserved": true
+  },
+  "omitted_metadata": [
+    "internal host/account/absolute paths",
+    "agent sessions",
+    "process identifiers",
+    "GPU UUIDs",
+    "foreign process snapshots"
+  ],
+  "historical_sha256_definition": "original private experiment bytes; current redacted portable files have distinct publication hashes",
+  "new_inference_runs": 0,
+  "original_predictions_data_checkpoints_logs_deleted": false,
+  "visibility_gate": "remain private if old sensitive commits are still retrievable",
+  "separate_public_export": {
+    "revision": "public-export-r1",
+    "repository": "Yoon-Jeong-ho/AttnCopy-public",
+    "fresh_root_history": true,
+    "old_git_objects_refs_copied": false,
+    "original_repository_remains_private": true,
+    "new_inference_runs": 0,
+    "scientific_result_files_changed": false,
+    "code_config_test_files_changed": false
+  }
+}
